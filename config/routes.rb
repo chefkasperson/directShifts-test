@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'private/test'
-  get 'current_user', to: 'current_user#index'
   devise_for :users, path: '', path_names: {
     sign_in: 'login',
     sign_out: 'logout',
@@ -10,4 +8,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+  post '/send_email',  to: 'private#send_email'
 end

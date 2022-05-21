@@ -1,8 +1,10 @@
 class PrivateController < ApplicationController
-  before_action :authenticate_user!
-  def test
+  def send_email
+    @user = User.find(params[:options][:user][:id])
+    @email = params[:options][:email]
+    UserMailer.referral_email(@user, @email).deliver_now
     render json: {
-      message: "This is a private message for #{current_user.email} you should only see if you've got a correct token"
+      message: "Your email has been sent"
     }
   end
 end
