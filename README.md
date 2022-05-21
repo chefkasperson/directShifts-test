@@ -17,4 +17,6 @@ In order to get the mailer to work new gmail username and password need to be pl
 The mail settings may also need to enable less secure apps access in the Google Account Security Settings.
 
 -- Additional --
-This app uses the 'devise' and 'devise-jwt' gems for authorization, the 'fast-json' gem for serialization, and the 'dotenv-rails' gem for .env file for securing Gmail account information.
+This app uses the 'devise' and 'devise-jwt' gems for authorization,
+the 'fast-json' gem for serialization,
+and the 'dotenv-rails' gem for .env file for securing Gmail account information.
